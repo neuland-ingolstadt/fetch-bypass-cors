@@ -4,6 +4,8 @@ An implementation of `fetch` that bypasses CORS policies by proxying encrypted H
 
 It does not simply relay requests via an HTTP proxy. Rather, it establishes a connection that is fully encrypted between the client and the server, with the proxy relaying a TCP stream to work around the limitations of modern browsers. This allows you to access APIs that did not whitelist your domain without exposing user data to your server.
 
+Originally developed by [@M4GNV5](https://github.com/M4GNV5) for [neuland.app](https://github.com/neuland-ingolstadt/THI-App).
+
 ## Example
 
 ### Setting up the proxy
