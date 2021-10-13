@@ -1,7 +1,7 @@
-import { tls } from 'node-forge/lib/index.js'
+const { tls } = require('node-forge/lib/index')
 
-import HttpRequest from './request.js'
-import HttpResponse from './response.js'
+const HttpRequest = require('./request')
+const HttpResponse = require('./response')
 
 const DEFAULT_TIMEOUT = 5000
 
@@ -20,7 +20,7 @@ function str2ab (str) {
 /**
  * A wrapper around node-forge that allows you to open a HTTPS connection proxied via WebSocket
  */
-export default class ProxiedConnection {
+class ProxiedConnection {
   constructor (options) {
     console.debug('Creating new connection')
 
@@ -194,3 +194,5 @@ export default class ProxiedConnection {
     this.close()
   }
 }
+
+module.exports = ProxiedConnection

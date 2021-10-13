@@ -1,10 +1,10 @@
-import { util } from 'node-forge/lib/index.js'
-import http from 'node-forge/lib/http.js'
+const { util } = require('node-forge/lib/index')
+const http = require('node-forge/lib/http')
 
 /**
  * Helper class that holds the request data and the requests event handlers.
  */
-export default class HttpRequest {
+class HttpRequest {
   constructor (options) {
     this.options = options
 
@@ -50,3 +50,5 @@ export default class HttpRequest {
     this.options.error(error)
   }
 }
+
+module.exports = HttpRequest

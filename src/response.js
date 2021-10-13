@@ -1,7 +1,7 @@
 /**
  * Helper class that mimics a `fetch` response.
  */
-export default class HttpResponse {
+class HttpResponse {
   constructor (status, data) {
     this.status = status
     this.data = data
@@ -15,3 +15,5 @@ export default class HttpResponse {
     return JSON.parse(this.data)
   }
 }
+
+module.exports = HttpResponse
