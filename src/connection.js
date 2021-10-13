@@ -1,7 +1,7 @@
-import { tls } from 'node-forge/lib/index'
+import { tls } from 'node-forge/lib/index.js'
 
-import HttpRequest from './request'
-import HttpResponse from './response'
+import HttpRequest from './request.js'
+import HttpResponse from './response.js'
 
 const DEFAULT_TIMEOUT = 5000
 

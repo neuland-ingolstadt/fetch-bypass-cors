@@ -1,5 +1,5 @@
-import { util } from 'node-forge/lib/index'
-import http from 'node-forge/lib/http'
+import { util } from 'node-forge/lib/index.js'
+import http from 'node-forge/lib/http.js'
 
 /**
  * Helper class that holds the request data and the requests event handlers.

@@ -1,3 +1,3 @@
-import ProxiedConnection from './connection'
+import ProxiedConnection from './connection.js'
 
 export default ProxiedConnection
