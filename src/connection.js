@@ -20,8 +20,9 @@ function str2ab (str) {
 /**
  * A wrapper around node-forge that allows you to open a HTTPS connection proxied via WebSocket
  */
-class ProxiedConnection {
+class ProxiedConnection extends EventTarget {
   constructor (options) {
+    super()
     console.debug('Creating new connection')
 
     this.options = options
@@ -106,7 +107,7 @@ class ProxiedConnection {
 
     this.tlsConnection.close()
     this.webSocket.close()
-    this.options.closed()
+    this.dispatchEvent(new CustomEvent('close'))
   }
 
   _restartTimeout () {
@@ -190,7 +191,7 @@ class ProxiedConnection {
    * Called when the connection errors out.
    */
   _onError (error) {
-    this.options.error(error)
+    this.dispatchEvent(new CustomEvent('error', { error }))
     this.close()
   }
 }
