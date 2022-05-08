@@ -42,6 +42,7 @@ class ProxiedConnection {
       server: false,
       caStore: options.certs,
       virtualHost: options.target,
+      verifyOptions: options.verifyOptions,
       verify: (connection, verified, depth, certs) => this._onVerify(verified, depth, certs),
       connected: connection => this._onConnected(),
       tlsDataReady: connection => this._onTlsDataReady(),
