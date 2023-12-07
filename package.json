@@ -1,6 +1,6 @@
 {
   "name": "fetch-bypass-cors",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "src/connection.js",
   "scripts": {
@@ -17,13 +17,13 @@
   },
   "homepage": "https://github.com/neuland-ingolstadt/fetch-bypass-cors#readme",
   "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.24.2",
+    "eslint": "^8.55.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0"
+    "eslint-plugin-promise": "^6.1.1"
   },
   "dependencies": {
-    "node-forge": "github:neuland-ingolstadt/forge#v1.3.1-tls1.2"
+    "node-forge": "github:neuland-ingolstadt/forge#v1.3.2-tls1.2"
   }
 }
